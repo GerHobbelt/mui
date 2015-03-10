@@ -118,66 +118,66 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Back" xml:space="preserve">
-    <value>Back</value>
+    <value>Atrás</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
   </data>
   <data name="Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Cerrar</value>
   </data>
   <data name="Maximize" xml:space="preserve">
-    <value>Maximize</value>
+    <value>Maximizar</value>
   </data>
   <data name="Minimize" xml:space="preserve">
-    <value>Minimize</value>
+    <value>Minimizar</value>
   </data>
   <data name="NavigateLink" xml:space="preserve">
-    <value>Navigate link</value>
+    <value>Enlace de navegación</value>
   </data>
   <data name="NavigationFailed" xml:space="preserve">
-    <value>Navigation failed</value>
+    <value>Navegación fallida</value>
   </data>
   <data name="NavigationFailedFrameNotFound" xml:space="preserve">
-    <value>Unable to navigate to {0}, could not find a ModernFrame target '{1}'</value>
+    <value>No se puede navegar a {0}. No se ha podido encontrar la ModernFrame de destino: '{1}'.</value>
   </data>
   <data name="NavigationFailedSourceNotSpecified" xml:space="preserve">
-    <value>Unable to navigate to {0}, no source specified</value>
+    <value>No se puede navegar a {0}. No se ha especificado el origen.</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
   </data>
   <data name="Ok" xml:space="preserve">
-    <value>OK</value>
+    <value>Aceptar</value>
   </data>
   <data name="Restore" xml:space="preserve">
-    <value>Restore</value>
+    <value>Restaurar</value>
   </data>
   <data name="Source" xml:space="preserve">
-    <value>Source</value>
+    <value>Origen</value>
   </data>
   <data name="StackTrace" xml:space="preserve">
-    <value>Stack trace</value>
+    <value>Pila de llamadas</value>
   </data>
   <data name="Suggestions" xml:space="preserve">
-    <value>Suggestions</value>
+    <value>Sugerencias</value>
   </data>
   <data name="SuggestionsDescription" xml:space="preserve">
-    <value>[url=cmd://copy]Copy[/url] the error details to the clipboard. Try to [url=cmd://refresh]refresh[/url] this page or go [url=cmd://browseback]back[/url].</value>
+    <value>[url=cmd://copy]Copie[/url] los detalles del error en el portapapeles. Intente [url=cmd://refresh]refrescar[/url] la página o vuelva [url=cmd://browseback]atrás[/url].</value>
   </data>
   <data name="UIThreadRequired" xml:space="preserve">
-    <value>Operation requires the UI thread</value>
+    <value>La operación requiere el hilo UI</value>
   </data>
   <data name="UnexpectedToken" xml:space="preserve">
-    <value>Unexpected token</value>
+    <value>Símbolo inesperado</value>
   </data>
   <data name="UnknownOS" xml:space="preserve">
-    <value>Unknown operating system</value>
+    <value>Sistema operativo desconocido</value>
   </data>
   <data name="UnknownTokenType" xml:space="preserve">
-    <value>Unknown token type</value>
+    <value>Tipo de símbolo desconcido</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Sí</value>
   </data>
 </root>
