@@ -170,6 +170,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Resources.ja-JP.Designer.cs">
+      <DependentUpon>Resources.ja-JP.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Win32\MonitorDpiType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Win32\NativeMethods.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Win32\OSVersionHelper.cs" />
@@ -222,6 +227,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Windows\Navigation\NavigationType.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources.ja-JP.resx">
+      <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources.resx">
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
