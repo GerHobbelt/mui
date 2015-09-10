@@ -214,6 +214,8 @@ namespace FirstFloor.ModernUI.Windows.Controls
             }
 
             dlg.Buttons = GetButtons(dlg, button);
+
+            FocusToDefaultButton(dlg, button);
             dlg.ShowDialog();
             return dlg.messageBoxResult;
         }
@@ -235,6 +237,32 @@ namespace FirstFloor.ModernUI.Windows.Controls
                 yield return owner.YesButton;
                 yield return owner.NoButton;
                 yield return owner.CancelButton;
+            }
+        }
+
+
+        private static void FocusToDefaultButton(ModernDialog owner, MessageBoxButton type)
+        {
+            switch(type)
+            {
+                case MessageBoxButton.OK:
+                    owner.OkButton.Focus();
+                    break;
+
+                case MessageBoxButton.OKCancel:
+                    owner.CancelButton.Focus();
+                    break;
+
+                case MessageBoxButton.YesNo:
+                    owner.NoButton.Focus();
+                    break;
+
+                case MessageBoxButton.YesNoCancel:
+                    owner.CancelButton.Focus();
+                    break;
+
+                default:
+                    break;
             }
         }
     }
