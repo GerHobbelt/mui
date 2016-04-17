@@ -105,7 +105,7 @@ namespace FirstFloor.ModernUI.Windows.Navigation
                 var i = value.IndexOf('#');
                 if (i != -1) {
                     fragment = value.Substring(i + 1);
-                    uri = new Uri(value.Substring(0, i), uri.IsAbsoluteUri ? UriKind.Absolute : UriKind.Relative);
+                    //uri = new Uri(value.Substring(0, i), uri.IsAbsoluteUri ? UriKind.Absolute : UriKind.Relative);
                 }
             }
 

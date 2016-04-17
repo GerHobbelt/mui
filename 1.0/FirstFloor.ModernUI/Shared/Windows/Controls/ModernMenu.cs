@@ -21,20 +21,24 @@ namespace FirstFloor.ModernUI.Windows.Controls
         /// Defines the LinkGroups dependency property.
         /// </summary>
         public static readonly DependencyProperty LinkGroupsProperty = DependencyProperty.Register("LinkGroups", typeof(LinkGroupCollection), typeof(ModernMenu), new PropertyMetadata(OnLinkGroupsChanged));
+
         /// <summary>
         /// Defines the SelectedLinkGroup dependency property.
         /// </summary>
         public static readonly DependencyProperty SelectedLinkGroupProperty = DependencyProperty.Register("SelectedLinkGroup", typeof(LinkGroup), typeof(ModernMenu), new PropertyMetadata(OnSelectedLinkGroupChanged));
+
         /// <summary>
         /// Defines the SelectedLink dependency property.
         /// </summary>
         public static readonly DependencyProperty SelectedLinkProperty = DependencyProperty.Register("SelectedLink", typeof(Link), typeof(ModernMenu), new PropertyMetadata(OnSelectedLinkChanged));
+
         /// <summary>
         /// Defines the SelectedSource dependency property.
         /// </summary>
         public static readonly DependencyProperty SelectedSourceProperty = DependencyProperty.Register("SelectedSource", typeof(Uri), typeof(ModernMenu), new PropertyMetadata(OnSelectedSourceChanged));
 
         private static readonly DependencyPropertyKey VisibleLinkGroupsPropertyKey = DependencyProperty.RegisterReadOnly("VisibleLinkGroups", typeof(ReadOnlyLinkGroupCollection), typeof(ModernMenu), null);
+
         /// <summary>
         /// Defines the VisibleLinkGroups dependency property.
         /// </summary>
@@ -46,6 +50,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
         public event EventHandler<SourceEventArgs> SelectedSourceChanged;
 
         private Dictionary<string, ReadOnlyLinkGroupCollection> groupMap = new Dictionary<string, ReadOnlyLinkGroupCollection>();     // stores LinkGroupCollections by GroupKey
+
         private bool isSelecting;
 
         /// <summary>
@@ -70,7 +75,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
                 // detach old event handler
                 oldValue.CollectionChanged -= OnLinkGroupsCollectionChanged;
             }
-            
+
             if (newValue != null) {
                 // ensures the menu is rebuild when changes in the LinkGroups occur
                 newValue.CollectionChanged += OnLinkGroupsCollectionChanged;
@@ -111,6 +116,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
             if (newValue != null) {
                 selectedSource = newValue.Source;
             }
+
             ((ModernMenu)o).SetCurrentValue(SelectedSourceProperty, selectedSource);
         }
 
@@ -129,7 +135,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
             // Uri "Page1.xaml#111" and "Page1#222" points to the same page, but with a different fragment
             // Must remove the fragment to avoid believing we are on different pages.
             Uri oldValueNoFragment = NavigationHelper.RemoveFragment(oldValue);
-            Uri newValueNoFragment = NavigationHelper.RemoveFragment(newValue); 
+            Uri newValueNoFragment = NavigationHelper.RemoveFragment(newValue);
 
             if (!this.isSelecting) {
                 // if old and new are equal, don't do anything
@@ -142,9 +148,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
 
             // raise SelectedSourceChanged event
             var handler = this.SelectedSourceChanged;
-            if (handler != null) {
-                handler(this, new SourceEventArgs(newValue));
-            }
+            handler?.Invoke(this, new SourceEventArgs(newValue));
         }
 
         /// <summary>
@@ -207,6 +211,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
         private void RebuildMenu(LinkGroupCollection groups)
         {
             this.groupMap.Clear();
+
             if (groups != null) {
                 // fill the group map based on group key
                 foreach (var group in groups) {
@@ -233,13 +238,13 @@ namespace FirstFloor.ModernUI.Windows.Controls
             LinkGroup selectedGroup = null;
             Link selectedLink = null;
 
-            Uri sourceNoFragment = NavigationHelper.RemoveFragment(this.SelectedSource);
+            ////Uri sourceNoFragment = NavigationHelper.RemoveFragment(this.SelectedSource);
 
             if (this.LinkGroups != null) {
                 // find the current select group and link based on the selected source
                 var linkInfo = (from g in this.LinkGroups
                                 from l in g.Links
-                                where l.Source == sourceNoFragment
+                                where l.Source.Equals(this.SelectedSource) // sourceNoFragment
                                 select new {
                                     Group = g,
                                     Link = l
@@ -259,7 +264,7 @@ namespace FirstFloor.ModernUI.Windows.Controls
                     }
                 }
             }
-            
+
             ReadOnlyLinkGroupCollection groups = null;
             if (selectedGroup != null) {
                 // ensure group itself maintains the selected link
@@ -270,8 +275,8 @@ namespace FirstFloor.ModernUI.Windows.Controls
                 this.groupMap.TryGetValue(groupKey, out groups);
             }
 
-            this.isSelecting = true;
             // update selection
+            this.isSelecting = true;
             SetValue(VisibleLinkGroupsPropertyKey, groups);
             SetCurrentValue(SelectedLinkGroupProperty, selectedGroup);
             SetCurrentValue(SelectedLinkProperty, selectedLink);
