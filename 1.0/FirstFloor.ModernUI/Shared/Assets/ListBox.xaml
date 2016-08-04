@@ -39,7 +39,6 @@
                         <Trigger Property="IsSelected" Value="true">
                             <Setter TargetName="Bd" Property="Background" Value="{DynamicResource ItemBackgroundSelected}"/>
                             <Setter Property="Foreground" Value="{DynamicResource ItemTextSelected}"/>
-                            <Setter Property="FontWeight" Value="Bold" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Foreground" Value="{DynamicResource ItemTextDisabled}"/>
