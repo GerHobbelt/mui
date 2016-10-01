@@ -6,8 +6,8 @@
     <SolidColorBrush x:Key="ButtonBackground" Color="#ffffff" />
     <SolidColorBrush x:Key="ButtonBackgroundHover" Color="#dddddd" />
     <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{DynamicResource AccentColor}" />
-    <SolidColorBrush x:Key="ButtonBorder" Color="#cccccc" />
-    <SolidColorBrush x:Key="ButtonBorderHover" Color="#cccccc" />
+    <SolidColorBrush x:Key="ButtonBorder" Color="#dbdbdb" />
+    <SolidColorBrush x:Key="ButtonBorderHover" Color="#dbdbdb" />
     <SolidColorBrush x:Key="ButtonBorderPressed" Color="{DynamicResource AccentColor}" />
     <SolidColorBrush x:Key="ButtonText" Color="#333333" />
     <SolidColorBrush x:Key="ButtonTextHover" Color="#333333" />
@@ -30,7 +30,7 @@
     <SolidColorBrush x:Key="DataGridHeaderForegroundHover" Color="#333333" />
     <SolidColorBrush x:Key="DataGridHeaderForegroundPressed" Color="#ffffff" />
     <SolidColorBrush x:Key="DataGridHeaderForegroundSelected" Color="#ffffff" />
-    <SolidColorBrush x:Key="DataGridGridLines" Color="#cccccc" />
+    <SolidColorBrush x:Key="DataGridGridLines" Color="#dbdbdb" />
     <SolidColorBrush x:Key="DataGridDropSeparator" Color="{DynamicResource AccentColor}" />
 
     <SolidColorBrush x:Key="Hyperlink" Color="{DynamicResource AccentColor}" />
@@ -39,15 +39,15 @@
     
     <SolidColorBrush x:Key="InputBackground" Color="#ffffff" />
     <SolidColorBrush x:Key="InputBackgroundHover" Color="#ffffff" />
-    <SolidColorBrush x:Key="InputBorder" Color="#cccccc" />
-    <SolidColorBrush x:Key="InputBorderHover" Color="#cccccc" />
+    <SolidColorBrush x:Key="InputBorder" Color="#dbdbdb" />
+    <SolidColorBrush x:Key="InputBorderHover" Color="#dbdbdb" />
     <SolidColorBrush x:Key="InputText" Color="#333333" />
     <SolidColorBrush x:Key="InputTextHover" Color="#333333" />
     <SolidColorBrush x:Key="InputTextDisabled" Color="#919191" />
     
     <SolidColorBrush x:Key="ItemBackgroundHover" Color="#dddddd" />
     <SolidColorBrush x:Key="ItemBackgroundSelected" Color="{DynamicResource AccentColor}" />
-    <SolidColorBrush x:Key="ItemBorder" Color="#cccccc" />
+    <SolidColorBrush x:Key="ItemBorder" Color="#dbdbdb" />
     <SolidColorBrush x:Key="ItemText" Color="#333333" />
     <SolidColorBrush x:Key="ItemTextSelected" Color="#ffffff" />
     <SolidColorBrush x:Key="ItemTextHover" Color="#333333" />
@@ -62,7 +62,7 @@
     <SolidColorBrush x:Key="MenuTextHover" Color="#bb000000" />
     <SolidColorBrush x:Key="MenuTextSelected" Color="#333333" />
 
-    <SolidColorBrush x:Key="ModernButtonBorder" Color="#cccccc" />
+    <SolidColorBrush x:Key="ModernButtonBorder" Color="#dbdbdb" />
     <SolidColorBrush x:Key="ModernButtonBorderHover" Color="#333333" />
     <SolidColorBrush x:Key="ModernButtonBorderPressed" Color="#333333" />
     <SolidColorBrush x:Key="ModernButtonBorderDisabled" Color="#919191" />
@@ -79,29 +79,29 @@
 
     <SolidColorBrush x:Key="ScrollBarBackground" Color="Transparent" />
     <SolidColorBrush x:Key="ScrollBarThumbBackground" Color="Transparent" />
-    <SolidColorBrush x:Key="ScrollBarThumbBackgroundDragging" Color="#cccccc" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackgroundDragging" Color="#dbdbdb" />
     <SolidColorBrush x:Key="ScrollBarThumbBackgroundHover" Color="#dddddd" />
-    <SolidColorBrush x:Key="ScrollBarThumbBorder" Color="#cccccc" />
+    <SolidColorBrush x:Key="ScrollBarThumbBorder" Color="#dbdbdb" />
     <SolidColorBrush x:Key="ScrollBarThumbForeground" Color="Transparent" />
     <SolidColorBrush x:Key="ScrollBarThumbForegroundDragging" Color="Transparent" />
     <SolidColorBrush x:Key="ScrollBarThumbForegroundHover" Color="Transparent" />
     
-    <SolidColorBrush x:Key="SeparatorBackground" Color="#cccccc" />
+    <SolidColorBrush x:Key="SeparatorBackground" Color="#dbdbdb" />
 
     <SolidColorBrush x:Key="SliderSelectionBackground" Color="{DynamicResource AccentColor}" />
     <SolidColorBrush x:Key="SliderSelectionBorder" Color="{DynamicResource AccentColor}" />
     <SolidColorBrush x:Key="SliderThumbBackground" Color="#ffffff" />
     <SolidColorBrush x:Key="SliderThumbBackgroundDragging" Color="{DynamicResource AccentColor}" />
     <SolidColorBrush x:Key="SliderThumbBackgroundHover" Color="#dddddd" />
-    <SolidColorBrush x:Key="SliderThumbBackgroundDisabled" Color="#cccccc" />
-    <SolidColorBrush x:Key="SliderThumbBorder" Color="#cccccc" />
+    <SolidColorBrush x:Key="SliderThumbBackgroundDisabled" Color="#dbdbdb" />
+    <SolidColorBrush x:Key="SliderThumbBorder" Color="#dbdbdb" />
     <SolidColorBrush x:Key="SliderThumbBorderDragging" Color="{DynamicResource AccentColor}" />
-    <SolidColorBrush x:Key="SliderThumbBorderHover" Color="#cccccc" />
-    <SolidColorBrush x:Key="SliderThumbBorderDisabled" Color="#cccccc" />
-    <SolidColorBrush x:Key="SliderTrackBackground" Color="#cccccc" />
-    <SolidColorBrush x:Key="SliderTrackBorder" Color="#cccccc" />
+    <SolidColorBrush x:Key="SliderThumbBorderHover" Color="#dbdbdb" />
+    <SolidColorBrush x:Key="SliderThumbBorderDisabled" Color="#dbdbdb" />
+    <SolidColorBrush x:Key="SliderTrackBackground" Color="#dbdbdb" />
+    <SolidColorBrush x:Key="SliderTrackBorder" Color="#dbdbdb" />
     <SolidColorBrush x:Key="SliderTick" Color="#919191" />
-    <SolidColorBrush x:Key="SliderTickDisabled" Color="#cccccc" />
+    <SolidColorBrush x:Key="SliderTickDisabled" Color="#dbdbdb" />
 
     <SolidColorBrush x:Key="SubMenuText" Color="#99000000" />
     <SolidColorBrush x:Key="SubMenuTextHover" Color="#66000000" />
