@@ -62,7 +62,7 @@
     <SolidColorBrush x:Key="MenuTextHover" Color="#919191" />
     <SolidColorBrush x:Key="MenuTextSelected" Color="#d1d1d1" />
 
-    <SolidColorBrush x:Key="ModernButtonBorder" Color="#919191" />
+    <SolidColorBrush x:Key="ModernButtonBorder" Color="#3e3e42" />
     <SolidColorBrush x:Key="ModernButtonBorderHover" Color="#d1d1d1" />
     <SolidColorBrush x:Key="ModernButtonBorderPressed" Color="#d1d1d1" />
     <SolidColorBrush x:Key="ModernButtonBorderDisabled" Color="#515151" />
