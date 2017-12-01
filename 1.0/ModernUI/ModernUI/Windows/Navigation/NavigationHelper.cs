@@ -40,6 +40,10 @@ namespace ModernUI.Windows.Navigation
             {
                 throw new ArgumentNullException(nameof(context));
             }
+            else if (context is ModernWindow)
+            {
+                context = ((ModernWindow)context).ContentFrame;
+            }
 
             // collect all ancestor frames
             ModernFrame[] frames = context.AncestorsAndSelf().OfType<ModernFrame>().ToArray();
