@@ -21,11 +21,13 @@
                             <ListBox.ItemContainerStyle>
                                 <Style TargetType="ListBoxItem">
                                     <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-                                    <Setter Property="FontFamily" Value="Segoe UI" />
+                                    <Setter Property="FontFamily" Value="微软雅黑" />
                                     <Setter Property="Foreground" Value="{DynamicResource MenuText}" />
                                     <Setter Property="FontSize" Value="15"/>
                                     <Setter Property="FontWeight" Value="Bold" />
-                                    <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
+                                    <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+                                    <Setter Property="TextOptions.TextRenderingMode" Value="ClearType"/>
+                                    <Setter Property="TextOptions.TextHintingMode" Value="Fixed"/>
                                     <Setter Property="Foreground" Value="{DynamicResource MenuText}" />
                                     <Setter Property="Margin" Value="12,0,0,0" />
                                     <Setter Property="Template">

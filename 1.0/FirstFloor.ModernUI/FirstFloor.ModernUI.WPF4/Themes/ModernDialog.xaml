@@ -48,10 +48,12 @@
 
                                             <!-- title -->
                                             <TextBlock DataContext="{TemplateBinding Title}" Text="{Binding Converter={StaticResource ToUpperConverter}}" 
-                                                   FontFamily="Segoe UI"
-                                                   FontSize="24"
-                                                   TextOptions.TextFormattingMode="Ideal"
-                                                   TextTrimming="CharacterEllipsis" />
+                                                       FontFamily="微软雅黑"
+                                                       FontSize="24"
+                                                       TextOptions.TextFormattingMode="Ideal"
+                                                       TextOptions.TextRenderingMode="ClearType"
+                                                       TextOptions.TextHintingMode="Fixed"
+                                                       TextTrimming="CharacterEllipsis" />
 
                                             <!-- content -->
                                             <controls:TransitioningContentControl Grid.Row="1" Margin="0,20" Content="{TemplateBinding Content}" />
