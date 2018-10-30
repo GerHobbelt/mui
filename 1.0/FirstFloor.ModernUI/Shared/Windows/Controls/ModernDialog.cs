@@ -1,6 +1,7 @@
 ﻿using FirstFloor.ModernUI.Presentation;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,10 +37,22 @@ namespace FirstFloor.ModernUI.Windows.Controls
         private MessageBoxResult messageBoxResult = MessageBoxResult.None;
 
         /// <summary>
+        /// Is escape key pressed close.
+        /// </summary>
+        public bool IsEscapeClose { get; set; }
+
+        /// <summary>
+        /// Callback before closing.
+        /// </summary>
+        public event Func<bool> PreviewClosingEvent;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="ModernDialog"/> class.
         /// </summary>
         public ModernDialog()
         {
+            this.IsEscapeClose = true;
+
             this.DefaultStyleKey = typeof(ModernDialog);
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
@@ -68,6 +81,32 @@ namespace FirstFloor.ModernUI.Windows.Controls
             if (Application.Current != null && Application.Current.MainWindow != this) {
                 this.Owner = Application.Current.MainWindow;
             }
+        }
+
+        /// <summary>
+        /// process for escape key down.
+        /// </summary>
+        /// <param name="e">parameter</param>
+        protected override void OnPreviewKeyDown(KeyEventArgs e)
+        {
+            base.OnPreviewKeyDown(e);
+            if (IsEscapeClose && e.Key == Key.Escape)
+            {
+                e.Handled = true;
+                this.Close();
+            }
+        }
+
+        /// <summary>
+        /// process for closing.
+        /// </summary>
+        /// <param name="e">parameter</param>
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            if (PreviewClosingEvent != null && !PreviewClosingEvent.Invoke())
+                e.Cancel = true;
+            else
+                base.OnClosing(e);
         }
 
         private Button CreateCloseDialogButton(string content, bool isDefault, bool isCancel, MessageBoxResult result)
