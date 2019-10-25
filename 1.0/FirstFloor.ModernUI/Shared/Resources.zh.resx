@@ -133,7 +133,7 @@
     <value>最小化</value>
   </data>
   <data name="NavigateLink" xml:space="preserve">
-    <value>导航连接</value>
+    <value>导航链接</value>
   </data>
   <data name="NavigationFailed" xml:space="preserve">
     <value>导航失败</value>
@@ -151,7 +151,7 @@
     <value>确定</value>
   </data>
   <data name="Restore" xml:space="preserve">
-    <value>还原</value>
+    <value>向下还原</value>
   </data>
   <data name="UIThreadRequired" xml:space="preserve">
     <value>必须在UI线程操作</value>
@@ -160,7 +160,7 @@
     <value>未知 Token</value>
   </data>
   <data name="UnknownOS" xml:space="preserve">
-    <value>未知操作系统</value>
+    <value>未知的操作系统</value>
   </data>
   <data name="UnknownTokenType" xml:space="preserve">
     <value>未知 Token 类型</value>
