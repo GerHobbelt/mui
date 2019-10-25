@@ -34,7 +34,7 @@ namespace FirstFloor.ModernUI.App
             }
 
             if (cachedBingImage == null) {
-                var url = await GetCurrentBingImageUrl();
+                var url = await GetCurrentBingImageUrl().ConfigureAwait(false);
                 if (url != null) {
                     cachedBingImage = new BitmapImage(url);
                 }
@@ -52,15 +52,21 @@ namespace FirstFloor.ModernUI.App
 
         private static async Task<Uri> GetCurrentBingImageUrl()
         {
-            var client = new HttpClient();
-            var result = await client.GetAsync("http://www.bing.com/hpimagearchive.aspx?format=xml&idx=0&n=2&mbl=1&mkt=en-ww");
-            if (result.IsSuccessStatusCode) {
-                using (var stream = await result.Content.ReadAsStreamAsync()) {
-                    var doc = XDocument.Load(stream);
+            using (var client = new HttpClient())
+            {
+                using (var result = await client.GetAsync(new Uri("http://www.bing.com/hpimagearchive.aspx?format=xml&idx=0&n=2&mbl=1&mkt=en-ww")).ConfigureAwait(false))
+                {
+                    if (result.IsSuccessStatusCode)
+                    {
+                        using (var stream = await result.Content.ReadAsStreamAsync().ConfigureAwait(false))
+                        {
+                            var doc = XDocument.Load(stream);
 
-                    var url = (string)doc.XPathSelectElement("/images/image/url");
+                            var url = (string)doc.XPathSelectElement("/images/image/url");
 
-                    return new Uri(string.Format(CultureInfo.InvariantCulture, "http://bing.com{0}", url), UriKind.Absolute);
+                            return new Uri(string.Format(CultureInfo.InvariantCulture, "http://bing.com{0}", url), UriKind.Absolute);
+                        }
+                    }
                 }
             }
 

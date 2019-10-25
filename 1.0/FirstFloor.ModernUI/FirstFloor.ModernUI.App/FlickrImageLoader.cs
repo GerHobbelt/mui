@@ -35,8 +35,8 @@ namespace FirstFloor.ModernUI.App
             }
 #endif
 
-            const int count = 50;       // limit the number of images to 50
 #if false
+            const int count = 50;       // limit the number of images to 50
             var listUri = string.Format(CultureInfo.InvariantCulture, "https://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key={0}&per_page={1}", apiKey, count);
 #else
             var listUri = @"https://cn.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=5";

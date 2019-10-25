@@ -21,7 +21,7 @@ namespace FirstFloor.ModernUI.App
             {
                 if (this.firstName != value) {
                     this.firstName = value;
-                    OnPropertyChanged("FirstName");
+                    OnPropertyChanged(nameof(FirstName));
                 }
             }
         }
@@ -33,7 +33,7 @@ namespace FirstFloor.ModernUI.App
             {
                 if (this.lastName != value) {
                     this.lastName = value;
-                    OnPropertyChanged("LastName");
+                    OnPropertyChanged(nameof(LastName));
                 }
             }
         }
