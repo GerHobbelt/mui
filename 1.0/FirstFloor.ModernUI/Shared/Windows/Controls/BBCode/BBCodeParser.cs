@@ -207,7 +207,7 @@ namespace FirstFloor.ModernUI.Windows.Controls.BBCode
 
                         parent.Inlines.Add(
                             new Run(string.Format("\u0020\u0020{0}\u0020\u0020",
-                                context.IsOrderedList ? string.Format("{0}.", ++context.ListCounter) : "\u2022")));
+                                context.IsOrderedList ? string.Format("{0}.", ++context.ListCounter) : "\u2022")));  // alternative bullet: \u25CF
                     }
 
                     ParseTag(token.Value, true, context);
