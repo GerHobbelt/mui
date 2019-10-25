@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,19 @@ namespace FirstFloor.ModernUI.Presentation
             if (handler != null) {
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+
+        /// <summary>
+        /// Occurs when the value of the property changes (avoid hard coding and avoid mistakes in attribute names)
+		/// 
+		/// `OnPropertyChanged(()=>this.Stocks);`
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="propertyExpression">Attribute expression</param>
+        protected virtual void OnPropertyChanged<T>(Expression<Func<T>> propertyExpression)
+        {
+            var propertyName = (propertyExpression.Body as MemberExpression).Member.Name;
+            this.OnPropertyChanged(propertyName);
         }
 
 #if !NET4

@@ -126,7 +126,7 @@ namespace FirstFloor.ModernUI.App.Content
             {
                 if (this.selectedPalette != value) {
                     this.selectedPalette = value;
-                    OnPropertyChanged("AccentColors");
+                    OnPropertyChanged(() => this.AccentColors);
 
                     this.SelectedAccentColor = this.AccentColors.FirstOrDefault();
                 }
@@ -140,7 +140,7 @@ namespace FirstFloor.ModernUI.App.Content
             {
                 if (this.selectedTheme != value) {
                     this.selectedTheme = value;
-                    OnPropertyChanged("SelectedTheme");
+                    OnPropertyChanged(() => this.SelectedTheme);
 
                     // and update the actual theme
                     AppearanceManager.Current.ThemeSource = value.Source;
@@ -155,7 +155,7 @@ namespace FirstFloor.ModernUI.App.Content
             {
                 if (this.selectedFontSize != value) {
                     this.selectedFontSize = value;
-                    OnPropertyChanged("SelectedFontSize");
+                    OnPropertyChanged(() => this.SelectedFontSize);
 
                     AppearanceManager.Current.FontSize = value == FontLarge ? FontSize.Large : FontSize.Small;
                 }
@@ -169,7 +169,7 @@ namespace FirstFloor.ModernUI.App.Content
             {
                 if (this.selectedAccentColor != value) {
                     this.selectedAccentColor = value;
-                    OnPropertyChanged("SelectedAccentColor");
+                    OnPropertyChanged(() => this.SelectedAccentColor);
 
                     AppearanceManager.Current.AccentColor = value;
                 }
