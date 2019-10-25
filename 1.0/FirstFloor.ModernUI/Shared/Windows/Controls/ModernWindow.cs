@@ -72,10 +72,22 @@ namespace FirstFloor.ModernUI.Windows.Controls
 
 
         /// <summary>
+        /// Is escape key pressed close.
+        /// </summary>
+        public bool IsEscapeClose { get; set; }
+
+        /// <summary>
+        /// Callback before closing.
+        /// </summary>
+        public event Func<bool> PreviewClosingEvent;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="ModernWindow"/> class.
         /// </summary>
         public ModernWindow()
         {
+            this.IsEscapeClose = true;
+
             this.DefaultStyleKey = typeof(ModernWindow);
 
             // 创建空集合
@@ -99,6 +111,32 @@ namespace FirstFloor.ModernUI.Windows.Controls
 
             // 监听主题改变事件
             AppearanceManager.Current.PropertyChanged += OnAppearanceManagerPropertyChanged;
+        }
+
+        /// <summary>
+        /// process for escape key down.
+        /// </summary>
+        /// <param name="e">parameter</param>
+        protected override void OnPreviewKeyDown(KeyEventArgs e)
+        {
+            base.OnPreviewKeyDown(e);
+            if (IsEscapeClose && e.Key == Key.Escape)
+            {
+                e.Handled = true;
+                this.Close();
+            }
+        }
+
+        /// <summary>
+        /// process for closing.
+        /// </summary>
+        /// <param name="e">parameter</param>
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            if (PreviewClosingEvent != null && !PreviewClosingEvent.Invoke())
+                e.Cancel = true;
+            else
+                base.OnClosing(e);
         }
 
         /// <summary>
