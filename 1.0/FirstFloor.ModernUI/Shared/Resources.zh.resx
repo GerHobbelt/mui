@@ -139,7 +139,7 @@
     <value>导航失败</value>
   </data>
   <data name="NavigationFailedFrameNotFound" xml:space="preserve">
-    <value>无法定位到 {0}, 找不到现代框架目标 '{1}'</value>
+    <value>无法导航到 {0}, 没有找到 ModernFrame 目标 '{1}'</value>
   </data>
   <data name="NavigationFailedSourceNotSpecified" xml:space="preserve">
     <value>无法导航到 {0}, 没有指定源</value>
@@ -153,29 +153,17 @@
   <data name="Restore" xml:space="preserve">
     <value>向下还原</value>
   </data>
-  <data name="Source" xml:space="preserve">
-    <value>Source</value>
-  </data>
-  <data name="StackTrace" xml:space="preserve">
-    <value>Stack trace</value>
-  </data>
-  <data name="Suggestions" xml:space="preserve">
-    <value>Suggestions</value>
-  </data>
-  <data name="SuggestionsDescription" xml:space="preserve">
-    <value>[url=cmd://copy]Copy[/url] the error details to the clipboard. Try to [url=cmd://refresh]refresh[/url] this page or go [url=cmd://browseback]back[/url].</value>
-  </data>
   <data name="UIThreadRequired" xml:space="preserve">
-    <value>操作需要的UI线程</value>
+    <value>必须在UI线程操作</value>
   </data>
   <data name="UnexpectedToken" xml:space="preserve">
-    <value>意外的标记</value>
+    <value>未知 Token</value>
   </data>
   <data name="UnknownOS" xml:space="preserve">
     <value>未知的操作系统</value>
   </data>
   <data name="UnknownTokenType" xml:space="preserve">
-    <value>未知的标记类型</value>
+    <value>未知 Token 类型</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>是</value>

@@ -44,7 +44,7 @@ Check out the **MUI 演示 app** 包括在 [MUI release](https://github.com/firs
   * 阅读更多信息并从下载包含模板的扩展[Visual Studio Gallery](http://visualstudiogallery.msdn.microsoft.com/7a4362a7-fe5d-4f9d-bc7b-0c0dc272fe31)
 
 ## 确认
-* [WPF外壳集成库](http://archive.msdn.microsoft.com/WPFShell)
+* [WPF外壳集成库](https://archive.msdn.microsoft.com/WPFShell)
 * Adapted the TransitioningContentControl from [WPF Toolkit](http://wpf.codeplex.com/)
 * 已适应 Windows Phone [RelativeAnimatingContentControl](http://msdn.microsoft.com/en-us/library/gg442303(v=vs.92).aspx) 用于自定义不确定的ProgressBar样式
 *现代进程样式 https://github.com/nigel-sampson/spinkit-xaml

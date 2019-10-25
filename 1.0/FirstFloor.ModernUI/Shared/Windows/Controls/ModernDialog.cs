@@ -223,6 +223,8 @@ namespace FirstFloor.ModernUI.Windows.Controls
             }
 
             dlg.Buttons = GetButtons(dlg, button);
+
+            FocusToDefaultButton(dlg, button);
             dlg.ShowDialog();
             return dlg.messageBoxResult;
         }
@@ -244,6 +246,51 @@ namespace FirstFloor.ModernUI.Windows.Controls
                 yield return owner.YesButton;
                 yield return owner.NoButton;
                 yield return owner.CancelButton;
+            }
+        }
+
+
+        private static void FocusToDefaultButton(ModernDialog owner, MessageBoxButton type)
+        {
+            switch(type)
+            {
+                case MessageBoxButton.OK:
+                    owner.OkButton.Focus();
+                    owner.OkButton.IsDefault = true;
+                    break;
+
+                case MessageBoxButton.OKCancel:
+                    owner.CancelButton.Focus();
+                    owner.CancelButton.IsDefault = true;
+                    owner.CancelButton.IsCancel = false;
+
+                    owner.OkButton.IsDefault = false;
+                    owner.OkButton.IsCancel = false;
+                    break;
+
+                case MessageBoxButton.YesNo:
+                    owner.NoButton.Focus();
+                    owner.NoButton.IsDefault = true;
+                    owner.NoButton.IsCancel = false;
+
+                    owner.YesButton.IsDefault = false;
+                    owner.YesButton.IsCancel = false;
+                    break;
+
+                case MessageBoxButton.YesNoCancel:
+                    owner.CancelButton.Focus();
+                    owner.CancelButton.IsDefault = true;
+                    owner.CancelButton.IsCancel = false;
+
+                    owner.YesButton.IsDefault = false;
+                    owner.YesButton.IsCancel = false;
+
+                    owner.NoButton.IsDefault = false;
+                    owner.NoButton.IsCancel = false;
+                    break;
+
+                default:
+                    break;
             }
         }
     }

@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Back" xml:space="preserve">
-    <value>后退</value>
+    <value>戻る</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>取消</value>
+    <value>キャンセル</value>
   </data>
   <data name="Close" xml:space="preserve">
-    <value>关闭</value>
+    <value>閉じる</value>
   </data>
   <data name="Maximize" xml:space="preserve">
     <value>最大化</value>
@@ -133,51 +133,39 @@
     <value>最小化</value>
   </data>
   <data name="NavigateLink" xml:space="preserve">
-    <value>导航链接</value>
+    <value>Navigate link</value>
   </data>
   <data name="NavigationFailed" xml:space="preserve">
-    <value>导航失败</value>
+    <value>Navigation failed</value>
   </data>
   <data name="NavigationFailedFrameNotFound" xml:space="preserve">
-    <value>无法定位到 {0}, 找不到现代框架目标 '{1}'</value>
+    <value>Unable to navigate to {0}, could not find a ModernFrame target '{1}'</value>
   </data>
   <data name="NavigationFailedSourceNotSpecified" xml:space="preserve">
-    <value>无法导航到 {0}, 没有指定源</value>
+    <value>Unable to navigate to {0}, no source specified</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>否</value>
+    <value>いいえ</value>
   </data>
   <data name="Ok" xml:space="preserve">
-    <value>确定</value>
+    <value>OK</value>
   </data>
   <data name="Restore" xml:space="preserve">
-    <value>向下还原</value>
-  </data>
-  <data name="Source" xml:space="preserve">
-    <value>Source</value>
-  </data>
-  <data name="StackTrace" xml:space="preserve">
-    <value>Stack trace</value>
-  </data>
-  <data name="Suggestions" xml:space="preserve">
-    <value>Suggestions</value>
-  </data>
-  <data name="SuggestionsDescription" xml:space="preserve">
-    <value>[url=cmd://copy]Copy[/url] the error details to the clipboard. Try to [url=cmd://refresh]refresh[/url] this page or go [url=cmd://browseback]back[/url].</value>
+    <value>restore</value>
   </data>
   <data name="UIThreadRequired" xml:space="preserve">
-    <value>操作需要的UI线程</value>
+    <value>Operation requires the UI thread</value>
   </data>
   <data name="UnexpectedToken" xml:space="preserve">
-    <value>意外的标记</value>
+    <value>Unexpected token</value>
   </data>
   <data name="UnknownOS" xml:space="preserve">
-    <value>未知的操作系统</value>
+    <value>Unknown operating system</value>
   </data>
   <data name="UnknownTokenType" xml:space="preserve">
-    <value>未知的标记类型</value>
+    <value>Unknown token type</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>是</value>
+    <value>はい</value>
   </data>
 </root>

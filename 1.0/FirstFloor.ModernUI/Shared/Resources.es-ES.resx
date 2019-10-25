@@ -118,66 +118,66 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Back" xml:space="preserve">
-    <value>后退</value>
+    <value>Atrás</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>取消</value>
+    <value>Cancelar</value>
   </data>
   <data name="Close" xml:space="preserve">
-    <value>关闭</value>
+    <value>Cerrar</value>
   </data>
   <data name="Maximize" xml:space="preserve">
-    <value>最大化</value>
+    <value>Maximizar</value>
   </data>
   <data name="Minimize" xml:space="preserve">
-    <value>最小化</value>
+    <value>Minimizar</value>
   </data>
   <data name="NavigateLink" xml:space="preserve">
-    <value>导航链接</value>
+    <value>Enlace de navegación</value>
   </data>
   <data name="NavigationFailed" xml:space="preserve">
-    <value>导航失败</value>
+    <value>Navegación fallida</value>
   </data>
   <data name="NavigationFailedFrameNotFound" xml:space="preserve">
-    <value>无法定位到 {0}, 找不到现代框架目标 '{1}'</value>
+    <value>No se puede navegar a {0}. No se ha podido encontrar la ModernFrame de destino: '{1}'.</value>
   </data>
   <data name="NavigationFailedSourceNotSpecified" xml:space="preserve">
-    <value>无法导航到 {0}, 没有指定源</value>
+    <value>No se puede navegar a {0}. No se ha especificado el origen.</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>否</value>
+    <value>No</value>
   </data>
   <data name="Ok" xml:space="preserve">
-    <value>确定</value>
+    <value>Aceptar</value>
   </data>
   <data name="Restore" xml:space="preserve">
-    <value>向下还原</value>
+    <value>Restaurar</value>
   </data>
   <data name="Source" xml:space="preserve">
-    <value>Source</value>
+    <value>Origen</value>
   </data>
   <data name="StackTrace" xml:space="preserve">
-    <value>Stack trace</value>
+    <value>Pila de llamadas</value>
   </data>
   <data name="Suggestions" xml:space="preserve">
-    <value>Suggestions</value>
+    <value>Sugerencias</value>
   </data>
   <data name="SuggestionsDescription" xml:space="preserve">
-    <value>[url=cmd://copy]Copy[/url] the error details to the clipboard. Try to [url=cmd://refresh]refresh[/url] this page or go [url=cmd://browseback]back[/url].</value>
+    <value>[url=cmd://copy]Copie[/url] los detalles del error en el portapapeles. Intente [url=cmd://refresh]refrescar[/url] la página o vuelva [url=cmd://browseback]atrás[/url].</value>
   </data>
   <data name="UIThreadRequired" xml:space="preserve">
-    <value>操作需要的UI线程</value>
+    <value>La operación requiere el hilo UI</value>
   </data>
   <data name="UnexpectedToken" xml:space="preserve">
-    <value>意外的标记</value>
+    <value>Símbolo inesperado</value>
   </data>
   <data name="UnknownOS" xml:space="preserve">
-    <value>未知的操作系统</value>
+    <value>Sistema operativo desconocido</value>
   </data>
   <data name="UnknownTokenType" xml:space="preserve">
-    <value>未知的标记类型</value>
+    <value>Tipo de símbolo desconcido</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>是</value>
+    <value>Sí</value>
   </data>
 </root>

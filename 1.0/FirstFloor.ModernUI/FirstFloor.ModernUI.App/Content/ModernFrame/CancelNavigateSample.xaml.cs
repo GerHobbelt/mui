@@ -48,7 +48,7 @@ namespace FirstFloor.ModernUI.App.Content.ModernFrame
         {
             // ask user if navigating away is ok
             string frameDescription;
-            if (e.IsParentFrameNavigating)
+            if (e != null && e.IsParentFrameNavigating)
             {
                 frameDescription = "A parent frame";
             }
