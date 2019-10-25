@@ -102,6 +102,7 @@
         <Setter Property="Background" Value="{DynamicResource ScrollBarBackground}"/>
         <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
         <Setter Property="Stylus.IsFlicksEnabled" Value="false"/>
+        <Setter Property="Margin" Value="4,0,0,0"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ScrollBar}">

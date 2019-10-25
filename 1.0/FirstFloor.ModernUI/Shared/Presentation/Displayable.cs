@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows;
 
 namespace FirstFloor.ModernUI.Presentation
 {
@@ -12,7 +8,11 @@ namespace FirstFloor.ModernUI.Presentation
     public abstract class Displayable
         : NotifyPropertyChanged
     {
-        private string displayName;
+
+        /// <summary>
+        ///     DependencyProperty for DisplayName to be able to bind the property
+        /// </summary>
+        public static readonly DependencyProperty DisplayNameProperty = DependencyProperty.Register("DisplayName", typeof(string), typeof(Displayable), new PropertyMetadata(""));
 
         /// <summary>
         /// Gets or sets the display name.
@@ -20,13 +20,10 @@ namespace FirstFloor.ModernUI.Presentation
         /// <value>The display name.</value>
         public string DisplayName
         {
-            get { return this.displayName; }
+            get { return (string)GetValue(DisplayNameProperty); }
             set
             {
-                if (this.displayName != value) {
-                    this.displayName = value;
-                    OnPropertyChanged("DisplayName");
-                }
+                SetValue(DisplayNameProperty, value);
             }
         }
     }
