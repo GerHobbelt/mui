@@ -9,6 +9,8 @@ artifacts/
 Thumbs.db
 
 # User-specific files
+*.GhostDoc.*
+*.sln.*
 *.suo
 *.user
 *.sln.docstates
@@ -20,9 +22,12 @@ Thumbs.db
 [Rr]eleases/
 x64/
 x86/
-bld/
+build/
 [Bb]in/
 [Oo]bj/
+
+# Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
+!packages/*/build/
 
 # Roslyn cache directories
 *.ide/
@@ -63,6 +68,7 @@ dlldata.c
 .builds
 *.pidb
 *.svclog
+*.log
 *.scc
 
 # Chutzpah Test files
@@ -103,6 +109,7 @@ _TeamCity*
 
 # NCrunch
 _NCrunch_*
+*.ncrunch*
 .*crunch*.local.xml
 
 # MightyMoose
@@ -135,6 +142,10 @@ publish/
 # but database connection strings (with potential passwords) will be unencrypted
 *.pubxml
 *.publishproj
+
+# NuGet Packages Directory
+## TODO: If you have NuGet Package Restore enabled, uncomment the next line
+Packages/
 
 # NuGet Packages
 *.nupkg
@@ -190,3 +201,26 @@ UpgradeLog*.htm
 FakesAssemblies/
 .nuget/nuget.exe.old
 *.DotSettings
+
+#LightSwitch generated files
+GeneratedArtifacts/
+_Pvt_Extensions/
+ModelManifest.xml
+
+# =========================
+# Windows detritus
+# =========================
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac desktop service store files
+.DS_Store
+
