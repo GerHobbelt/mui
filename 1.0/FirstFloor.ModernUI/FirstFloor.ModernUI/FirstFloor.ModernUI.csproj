@@ -3,16 +3,22 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <LangVersion>8.0</LangVersion>
-    <PackageId>ModernUI.WPF.Core</PackageId>
+    <PackageId>ModernUI.CoreWPF</PackageId>
     <Title>ModernUI for WPF for .net core</Title>
-    <Description>Direct Port of First Floors Modern UI from .net Framework to .net core
+    <Description>Direct Port of First Floors Modern UI from .net Framework to .net core from https://github.com/firstfloorsoftware/mui
+
 A set of controls and styles converting your WPF application into a great looking Modern UI app.</Description>
-    <Authors>First Floor Software</Authors>
-    <Company>First Floor Software</Company>
+    <Authors>First Floor Software, Entangled Bits ltd</Authors>
+    <Company>Entangled Bits ltd</Company>
     <Product>ModernUI for WPF for .net core</Product>
     <Copyright>Copyright 2013-2016 First Floor Software</Copyright>
     <PackageReleaseNotes>Changed project to .net core
 No changes to the codebase itself</PackageReleaseNotes>
     <PackageTags>modern ui, metro, wpf, .net core</PackageTags>
+    <Version>3.1</Version>
+    <RepositoryUrl>https://github.com/EntangledBits/mui</RepositoryUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Code\mui\1.0\FirstFloor.ModernUI\FirstFloor.ModernUI\FirstFloor.ModernUI.xml</DocumentationFile>
   </PropertyGroup>
 </Project>
