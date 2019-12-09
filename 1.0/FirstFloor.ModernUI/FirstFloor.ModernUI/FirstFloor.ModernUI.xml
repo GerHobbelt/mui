@@ -1702,6 +1702,11 @@
             Identifies the SelectedSource dependency property.
             </summary>
         </member>
+        <member name="F:FirstFloor.ModernUI.Windows.Controls.ModernTab.TabAlignmentProperty">
+            <summary>
+            Sets Tab Horizontal Alignment
+            </summary>
+        </member>
         <member name="E:FirstFloor.ModernUI.Windows.Controls.ModernTab.SelectedSourceChanged">
             <summary>
             Occurs when the selected source has changed.
@@ -1745,6 +1750,12 @@
             Gets or sets the source URI of the selected link.
             </summary>
             <value>The source URI of the selected link.</value>
+        </member>
+        <member name="P:FirstFloor.ModernUI.Windows.Controls.ModernTab.TabAlignment">
+            <summary>
+            Gets or sets the HorizontalAlignment for the tabs.
+            </summary>
+            <value>The HorizontalAlignment for the tabs.</value>
         </member>
         <member name="T:FirstFloor.ModernUI.Windows.Controls.ModernToggleButton">
             <summary>

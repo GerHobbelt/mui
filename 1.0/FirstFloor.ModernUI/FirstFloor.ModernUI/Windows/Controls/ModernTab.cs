@@ -32,7 +32,10 @@ namespace FirstFloor.ModernUI.Windows.Controls
         /// Identifies the SelectedSource dependency property.
         /// </summary>
         public static readonly DependencyProperty SelectedSourceProperty = DependencyProperty.Register("SelectedSource", typeof(Uri), typeof(ModernTab), new PropertyMetadata(OnSelectedSourceChanged));
-
+        /// <summary>
+        /// Sets Tab Horizontal Alignment
+        /// </summary>
+        public static readonly DependencyProperty TabAlignmentProperty = DependencyProperty.Register("TabAlignment", typeof(HorizontalAlignment), typeof(ModernTab), new PropertyMetadata(HorizontalAlignment.Right));
         /// <summary>
         /// Occurs when the selected source has changed.
         /// </summary>
@@ -156,6 +159,16 @@ namespace FirstFloor.ModernUI.Windows.Controls
         {
             get { return (Uri)GetValue(SelectedSourceProperty); }
             set { SetValue(SelectedSourceProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the HorizontalAlignment for the tabs.
+        /// </summary>
+        /// <value>The HorizontalAlignment for the tabs.</value>
+        public HorizontalAlignment TabAlignment
+        {
+            get { return (HorizontalAlignment)GetValue(TabAlignmentProperty); }
+            set { SetValue(TabAlignmentProperty, value); }
         }
     }
 }

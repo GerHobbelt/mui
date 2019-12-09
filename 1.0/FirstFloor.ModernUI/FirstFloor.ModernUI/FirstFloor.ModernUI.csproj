@@ -12,10 +12,9 @@ A set of controls and styles converting your WPF application into a great lookin
     <Company>Entangled Bits ltd</Company>
     <Product>ModernUI for WPF for .net core</Product>
     <Copyright>Copyright 2013-2016 First Floor Software</Copyright>
-    <PackageReleaseNotes>Changed project to .net core
-No changes to the codebase itself</PackageReleaseNotes>
+    <PackageReleaseNotes>Added TabAlignment property to ModernTab</PackageReleaseNotes>
     <PackageTags>modern ui, metro, wpf, .net core</PackageTags>
-    <Version>3.1</Version>
+    <Version>3.1.1</Version>
     <RepositoryUrl>https://github.com/EntangledBits/mui</RepositoryUrl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
