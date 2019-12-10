@@ -4,10 +4,29 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <AssemblyName>ModernUIDemo</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\background.kitty.png" />
+    <None Remove="Assets\background.love.jpg" />
+    <None Remove="Assets\background.snowflakes.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FirstFloor.ModernUI\FirstFloor.ModernUI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\background.kitty.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\background.love.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\background.snowflakes.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
