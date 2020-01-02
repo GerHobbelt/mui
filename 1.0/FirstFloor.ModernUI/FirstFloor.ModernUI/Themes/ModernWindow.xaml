@@ -105,7 +105,7 @@
                                         </ItemsControl>
 
                                         <!-- logo (visible only when LogoData is not null) -->
-                                        <Button Grid.Column="2" WindowChrome.IsHitTestVisibleInChrome="True" Width="36" Height="36" Margin="8,0"
+                                        <Button Grid.Column="2" WindowChrome.IsHitTestVisibleInChrome="True" Width="42" Height="36" Margin="8,0"
                                                 DataContext="{TemplateBinding LogoData}"
                                                 Command="{Binding LogoCommand, RelativeSource={RelativeSource TemplatedParent}}"
                                                 CommandParameter="{Binding LogoCommandParameter, RelativeSource={RelativeSource TemplatedParent}}"
@@ -117,7 +117,7 @@
                                                         <Setter.Value>
                                                             <ControlTemplate TargetType="{x:Type Button}">
                                                                 <Border Background="{DynamicResource Accent}">
-                                                                    <Path Data="{Binding}" Stretch="Uniform" Fill="White" Width="24" Height="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                                                    <Path Data="{Binding}" Stretch="Uniform" Fill="White" Width="36" Height="27" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                                                 </Border>
                                                             </ControlTemplate>
                                                         </Setter.Value>
